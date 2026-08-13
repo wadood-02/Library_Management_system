@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --bg-void: #05050a;
+  --bg-panel: rgba(22, 22, 34, 0.6);
+  --border-glow: rgba(124, 108, 255, 0.35);
+  --accent: #7c6cff;
+  --accent-glow: #a78bff;
+  --accent-cyan: #00e5ff;
+  --text-primary: #f2f2f7;
+  --text-muted: #8a8a9e;
+  --success: #4caf50;
+  --danger: #ff5c5c;
+  --warning: #ffa726;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at 20% 0%, #14142a 0%, #05050a 60%);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.glass-panel {
+  background: var(--bg-panel);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--border-glow);
+  border-radius: 14px;
+  box-shadow: 0 0 24px rgba(124, 108, 255, 0.08);
+}
+
+.glow-text {
+  color: var(--accent-glow);
+  text-shadow: 0 0 12px rgba(167, 139, 255, 0.6);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), #5a4fcf);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0 16px rgba(124, 108, 255, 0.4);
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+.btn-primary:hover {
+  box-shadow: 0 0 26px rgba(124, 108, 255, 0.7);
+  transform: translateY(-1px);
+}
+
+.input-field {
+  background: rgba(10, 10, 18, 0.7);
+  border: 1px solid var(--border-glow);
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.input-field:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 12px rgba(124, 108, 255, 0.4);
+}
+
+.card-glow {
+  background: var(--bg-panel);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--border-glow);
+  border-radius: 14px;
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-glow:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px rgba(124, 108, 255, 0.25);
+}
